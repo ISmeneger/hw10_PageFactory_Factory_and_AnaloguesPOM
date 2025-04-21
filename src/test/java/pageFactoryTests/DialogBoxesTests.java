@@ -5,7 +5,6 @@ import Ilya_S.pageFactory.HomePage;
 import org.junit.jupiter.api.*;
 
 import static Ilya_S.pageFactory.DialogBoxesPage.DIALOG_BOXES_FORM_TITLE;
-import static Ilya_S.pageFactory.HomePage.BASE_URL;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
