@@ -49,3 +49,5 @@ src/main/resources/*.properties
 # Исключение: разрешаем загружать шаблон (если нужно)
 !src/test/resources/template.properties
 !src/main/resources/template.properties
+!src/test/resources/config.properties
+!src/main/resources/config.properties
