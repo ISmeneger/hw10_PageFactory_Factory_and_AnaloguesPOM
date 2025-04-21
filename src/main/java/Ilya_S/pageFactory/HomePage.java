@@ -28,4 +28,10 @@ public class HomePage extends BasePage {
         driver.findElement(By.linkText("Login form")).click();
         return new LoginFormPage(driver);
     }
+
+    @Step("Open Dialog boxes page")
+    public DialogBoxesPage openDialogBoxesPage() {
+        driver.findElement(By.linkText("Dialog boxes")).click();
+        return new DialogBoxesPage(driver);
+    }
 }
