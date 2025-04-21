@@ -2,17 +2,16 @@ package pageFactoryTests;
 
 import Ilya_S.pageFactory.HomePage;
 import Ilya_S.pageFactory.LoginFormPage;
-import configs.TestPropertiesConfig;
+import Ilya_S.configs.TestPropertiesConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static Ilya_S.pageFactory.HomePage.BASE_URL;
 import static Ilya_S.pageFactory.LoginFormPage.LOGIN_FORM_TITLE;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LoginFormTests extends BaseTest {
+class LoginFormTests extends BaseTest {
     HomePage homePage;
     LoginFormPage loginFormPage;
     TestPropertiesConfig config = ConfigFactory.create(TestPropertiesConfig.class, System.getProperties());
@@ -56,10 +55,4 @@ public class LoginFormTests extends BaseTest {
 
         assertEquals(INVALID_LOGIN_TEXT, loginFormPage.getInvalidMessage());
     }
-
-
-
-
-
-
 }
