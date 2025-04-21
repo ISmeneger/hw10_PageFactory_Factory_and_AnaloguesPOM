@@ -1,12 +1,13 @@
-package configs;
+package Ilya_S.configs;
 
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
         "classpath:${env}.properties",
-        "classpath:default.properties"
+        "classpath:default.properties",
+        "classpath:config.properties"
 })
-public interface TestPropertiesConfig extends Config {
+public interface TestPropertiesConfig extends org.aeonbits.owner.Config  {
 
     @Key("login")
     String getUsername();
@@ -19,4 +20,11 @@ public interface TestPropertiesConfig extends Config {
 
     @Key("invalidPassword")
     String getInvalidPassword();
+
+    @Key("browser")
+    @DefaultValue("chrome")
+    String browser();
+
+    @Key("remoteUrl")
+    String remoteUrl();
 }
