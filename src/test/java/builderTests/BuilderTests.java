@@ -11,16 +11,17 @@ class BuilderTests {
 
     @Test
     void builderTest() {
+        Address address = Address.builder()
+                .street("123 Main St")
+                .city("Anytown")
+                .state("CA")
+                .zip("12345")
+                .build();
         User user = User.builder()
                 .name("John Doe")
                 .age(30)
                 .email("john.doe@example.com")
-                .address(Address.builder()
-                        .street("123 Main St")
-                        .city("Anytown")
-                        .state("CA")
-                        .zip("12345")
-                        .build())
+                .address(address)
                 .build();
 
         assertNotNull(user);
@@ -29,16 +30,17 @@ class BuilderTests {
 
     @Test
     void builderUpdateTest() {
+        Address address = Address.builder()
+                .street("123 Main St")
+                .city("Anytown")
+                .state("CA")
+                .zip("12345")
+                .build();
         User initialUser = User.builder()
                 .name("John Doe")
                 .age(30)
                 .email("john.doe@example.com")
-                .address(Address.builder()
-                        .street("123 Main St")
-                        .city("Anytown")
-                        .state("CA")
-                        .zip("12345")
-                        .build())
+                .address(address)
                 .build();
         User anotherUser = initialUser.toBuilder()
                 .name("Jane Doe")
