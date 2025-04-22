@@ -1,10 +1,8 @@
 package Ilya_S.fluentPages;
 
-import io.qameta.allure.Step;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -23,24 +21,10 @@ public class FluentBasePage {
     WebDriverWait wait;
     int timeoutSec = 5;
 
-    //Locators
-    @FindBy(className = "display-6")
-    private WebElement title;
-
     public FluentBasePage(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSec));
         PageFactory.initElements(driver, this);
-    }
-
-    @Step("Getting current url")
-    public String getCurrentUrl() {
-        return driver.getCurrentUrl();
-    }
-
-    @Step("Get subpage title")
-    public String getTitle() {
-        return title.getText();
     }
 
     public void visit(String url) {

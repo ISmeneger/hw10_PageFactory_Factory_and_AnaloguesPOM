@@ -1,8 +1,6 @@
 package Ilya_S.fluentPages;
 
-import Ilya_S.configs.TestPropertiesConfig;
 import io.qameta.allure.Step;
-import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
