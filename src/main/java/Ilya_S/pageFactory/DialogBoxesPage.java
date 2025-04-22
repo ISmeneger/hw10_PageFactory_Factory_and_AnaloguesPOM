@@ -72,15 +72,15 @@ public class DialogBoxesPage extends BasePage {
     @Step("Get text in launch confirm")
     public String getLaunchConfirmText() {
         wait.until(ExpectedConditions.alertIsPresent());
-        Alert launchConfirm = driver.switchTo().alert();
-        return launchConfirm.getText();
+        Alert launchConfirmText = driver.switchTo().alert();
+        return launchConfirmText.getText();
     }
 
     @Step("Click accept in launch confirm")
     public void acceptConfirm() {
         wait.until(ExpectedConditions.alertIsPresent());
-        Alert launchConfirm = driver.switchTo().alert();
-        launchConfirm.accept();
+        Alert launchConfirmAccept = driver.switchTo().alert();
+        launchConfirmAccept.accept();
     }
 
     @Step("Get text after click confirm")
@@ -91,8 +91,8 @@ public class DialogBoxesPage extends BasePage {
     @Step("Click cancel in launch confirm")
     public void cancelConfirm() {
         wait.until(ExpectedConditions.alertIsPresent());
-        Alert launchConfirm = driver.switchTo().alert();
-        launchConfirm.dismiss();
+        Alert launchConfirmDismiss = driver.switchTo().alert();
+        launchConfirmDismiss.dismiss();
     }
 
     @Step("Click to launch prompt")
@@ -103,21 +103,21 @@ public class DialogBoxesPage extends BasePage {
     @Step("Get text in launch confirm")
     public String getLaunchPromptText() {
         wait.until(ExpectedConditions.alertIsPresent());
-        Alert launchPrompt = driver.switchTo().alert();
-        return launchPrompt.getText();
+        Alert launchPromptText = driver.switchTo().alert();
+        return launchPromptText.getText();
     }
 
     @Step("Input launch prompt text")
     public void inputLaunchPromptText(String text) {
-        Alert launchPrompt = driver.switchTo().alert();
-        launchPrompt.sendKeys(text);
+        Alert launchPromptSendText = driver.switchTo().alert();
+        launchPromptSendText.sendKeys(text);
     }
 
     @Step("Click accept in launch confirm")
     public void acceptPrompt() {
         wait.until(ExpectedConditions.alertIsPresent());
-        Alert launchPrompt = driver.switchTo().alert();
-        launchPrompt.accept();
+        Alert launchPromptAccept = driver.switchTo().alert();
+        launchPromptAccept.accept();
     }
 
     @Step("Get text after click confirm")
@@ -128,8 +128,8 @@ public class DialogBoxesPage extends BasePage {
     @Step("Click cancel in launch confirm")
     public void cancelLaunchPrompt() {
         wait.until(ExpectedConditions.alertIsPresent());
-        Alert launchPrompt = driver.switchTo().alert();
-        launchPrompt.dismiss();
+        Alert launchPromptDismiss = driver.switchTo().alert();
+        launchPromptDismiss.dismiss();
     }
 
     @Step("Click to launch modal")
