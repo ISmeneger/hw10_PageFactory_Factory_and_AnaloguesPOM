@@ -11,7 +11,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class HeaderComponentTests extends BaseTest {
     HomePage homePage;
-    HeaderComponent headerComponent;
     private static final String TITLE_TEXT = "Hands-On Selenium WebDriver with Java";
     private static final String SUB_TITLE_TEXT = "Practice site";
     private static final String GIT_PAGE_URL = "https://github.com/bonigarcia/selenium-webdriver-java";
@@ -19,25 +18,25 @@ class HeaderComponentTests extends BaseTest {
     @BeforeEach
     void setupPage() {
         homePage = new HomePage(driver);
-        headerComponent = new HeaderComponent(driver);
     }
 
     @Test
     @DisplayName("Проверка заголовка страницы")
     void checkTitleText() {
-        assertEquals(TITLE_TEXT, headerComponent.getTitleText());
+        assertEquals(TITLE_TEXT, homePage.getHeader().getTitleText());
     }
 
     @Test
     @DisplayName("Проверка подзаголовка страницы")
     void checkSubTitleText() {
-        assertEquals(SUB_TITLE_TEXT, headerComponent.getSubTitleText());
+        assertEquals(SUB_TITLE_TEXT, homePage.getHeader().getSubTitleText());
     }
 
     @Test
     @DisplayName("Проверка иконки с логотипом на странице")
     void checkLogoIcon() {
-        headerComponent.clickLogo();
-        assertEquals(GIT_PAGE_URL, headerComponent.getCurrentUrlGitPage());
+        HeaderComponent header = homePage.getHeader();
+        header.clickLogo();
+        assertEquals(GIT_PAGE_URL, header.getCurrentUrlGitPage());
     }
 }
