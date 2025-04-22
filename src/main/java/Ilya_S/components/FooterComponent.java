@@ -34,5 +34,4 @@ public class FooterComponent {
     public String getCurrentUrlInformationPage() {
         return driver.getCurrentUrl();
     }
-
 }
