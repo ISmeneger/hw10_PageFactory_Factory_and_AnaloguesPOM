@@ -22,7 +22,7 @@ public class WebDriverFactory {
 
     public static WebDriver createWebDriver(String browser) {
         WebDriver driver = switch (browser.toLowerCase()) {
-            case CHROME -> getChromeDriver();
+            case CHROME -> getChromeDriver() ;
             case FIREFOX -> new FirefoxDriver();
             case EDGE -> new EdgeDriver();
             // Добавьте другие браузеры по необходимости
