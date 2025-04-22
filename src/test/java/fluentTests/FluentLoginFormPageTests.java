@@ -7,7 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pageFactoryTests.BaseTest;
 
-public class FluentLoginFormPageTests extends BaseTest {
+class FluentLoginFormPageTests extends BaseTest {
     TestPropertiesConfig config = ConfigFactory.create(TestPropertiesConfig.class, System.getProperties());
     FluentLoginFormPage loginFormPage;
 
