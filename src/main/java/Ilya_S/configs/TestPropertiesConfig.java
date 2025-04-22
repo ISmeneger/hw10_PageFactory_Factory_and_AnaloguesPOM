@@ -5,7 +5,6 @@ import org.aeonbits.owner.Config;
 @Config.Sources({
         "classpath:${env}.properties",
         "classpath:default.properties",
-        "classpath:config.properties"
 })
 public interface TestPropertiesConfig extends org.aeonbits.owner.Config  {
 
@@ -22,7 +21,7 @@ public interface TestPropertiesConfig extends org.aeonbits.owner.Config  {
     String getInvalidPassword();
 
     @Key("browser")
-    @DefaultValue("chrome")
+//    @DefaultValue("chrome")
     String browser();
 
     @Key("remoteUrl")
